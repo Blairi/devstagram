@@ -4,7 +4,6 @@
 /public/perfiles/*
 /public/uploads/*
 /storage/*.key
-/storage/framework
 /vendor
 .env
 .env.backup
