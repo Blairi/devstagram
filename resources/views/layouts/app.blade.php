@@ -8,13 +8,13 @@
     @vite('resources/css/app.css')
     @livewireStyles
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 my-[120px]">
 
-    <header class="p-5 border-b bg-white shadow">
+    <header class="p-5 border-b bg-white shadow fixed top-0 left-0 w-full z-10">
 
         <div class="container mx-auto flex justify-between items-center">
 
-            <a href="{{ route('home') }}" class="text-3xl font-black">
+            <a href="{{ route('home') }}" class="text-2xl md:text-3xl font-black">
                 Devstagram
             </a>
 
@@ -31,20 +31,22 @@
                         Crear
                     </a>
 
-                    <a class="font-bold text-gray-600 text-sm"
-                       href="{{ route('posts.index', auth()->user()->username) }}"
-                    >
-                        Hola: <span class="font-normal">
+                    <div class="hidden md:flex md:items-center md:gap-2">
+                        <a class="font-bold text-gray-600 text-sm"
+                           href="{{ route('posts.index', auth()->user()->username) }}"
+                        >
+                            Hola: <span class="font-normal">
                                 {{ auth()->user()->username }}
                         </span>
-                    </a>
+                        </a>
 
-                    <form method="post" action="{{ route('logout') }}">
-                        @csrf
-                        <button class="font-bold uppercase text-gray-600 text-sm" type="submit">
-                            Cerrar Sesión
-                        </button>
-                    </form>
+                        <form method="post" action="{{ route('logout') }}">
+                            @csrf
+                            <button class="font-bold uppercase text-gray-600 text-sm" type="submit">
+                                Cerrar Sesión
+                            </button>
+                        </form>
+                    </div>
 
                 </nav>
             @endauth
