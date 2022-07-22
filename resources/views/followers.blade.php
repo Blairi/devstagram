@@ -9,7 +9,7 @@
 
         @if( $user->followers->count() )
             @foreach($user->followers as $user)
-                <livewire:show-user :user="$user"/>
+                <livewire:user-profile :user="$user"/>
             @endforeach
         @else
             <p class="text-center">No hay usuarios</p>

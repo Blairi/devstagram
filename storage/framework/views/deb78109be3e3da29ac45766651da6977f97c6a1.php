@@ -9,16 +9,16 @@
             <?php $__currentLoopData = $user->following; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php
 if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('show-user', ['user' => $user])->html();
-} elseif ($_instance->childHasBeenRendered('f9cN48p')) {
-    $componentId = $_instance->getRenderedChildComponentId('f9cN48p');
-    $componentTag = $_instance->getRenderedChildComponentTagName('f9cN48p');
+    $html = \Livewire\Livewire::mount('user-profile', ['user' => $user])->html();
+} elseif ($_instance->childHasBeenRendered('RJzLhmd')) {
+    $componentId = $_instance->getRenderedChildComponentId('RJzLhmd');
+    $componentTag = $_instance->getRenderedChildComponentTagName('RJzLhmd');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('f9cN48p');
+    $_instance->preserveRenderedChild('RJzLhmd');
 } else {
-    $response = \Livewire\Livewire::mount('show-user', ['user' => $user]);
+    $response = \Livewire\Livewire::mount('user-profile', ['user' => $user]);
     $html = $response->html();
-    $_instance->logRenderedChild('f9cN48p', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('RJzLhmd', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

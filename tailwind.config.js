@@ -6,7 +6,14 @@ module.exports = {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/**.blade.php"
     ],
     theme: {
-        extend: {},
+        extend: {
+            keyframes: {
+                newCommentary: {
+                    '0%': { background: '#0284c7' },
+                    '100%': { background: '#ffffff' },
+                }
+            }
+        },
     },
     plugins: [],
 }

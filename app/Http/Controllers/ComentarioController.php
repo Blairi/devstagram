@@ -23,6 +23,7 @@ class ComentarioController extends Controller
         ]);
 
         // Mensaje
-        return back()->with('mensaje', 'Comentario Reailizado Correctamente');
+        return back()->with('mensaje', 'Comentario Realizado Correctamente');
+
     }
 }
