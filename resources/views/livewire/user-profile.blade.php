@@ -1,6 +1,8 @@
-<div class="flex flex-col justify-center lg:flex-row px-4 py-5 gap-1 items-center lg:justify-start min-h-[110px] h-full">
+<div
+    class="flex flex-col justify-center lg:flex-row px-4 py-5 gap-1 items-center lg:justify-start h-[110px] h-full overflow-hidden"
+>
 
-    <div class="min-w-[52px] lg:max-w-[70px]">
+    <div class="w-[52px] lg:w-[70px]">
         <img
             class="rounded-full w-full object-cover object-center"
             src="{{ $user->imagen ?
