@@ -58,6 +58,19 @@ unset($__errorArgs, $__bag); ?>
                         class="border p-3 w-full rounded-lg
                         "
                     />
+                    <?php $__errorArgs = ['imagen'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        <?php echo e('Imagen demasiado pesada. Max: 1.0 [mb]'); ?>
+
+                    </p>
+                    <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                 </div>
                 <div class="mb-1">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">

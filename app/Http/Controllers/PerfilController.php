@@ -26,7 +26,8 @@ class PerfilController extends Controller
         $request->request->add(['username' => Str::slug($request->username)]);
         $this->validate($request, [
             'username' => ['required', 'unique:users,username,' . auth()->user()->id, 'min:3', 'max:20', 'not_in:twitter,editar-perfil,edit-credentials'],
-            'name' => ['required', 'max:30']
+            'name' => ['required', 'max:30'],
+            'imagen' => ['max:1048']
         ]);
 
         if($request->imagen){
@@ -43,7 +44,6 @@ class PerfilController extends Controller
         }
 
         // Guardar cambios
-        // TODO: Hacer cambio de email y actualizar la contraseña poniendo la actual
         $usuario = User::find(auth()->user()->id);
         $usuario->username = $request->username;
         $usuario->name = $request->name;

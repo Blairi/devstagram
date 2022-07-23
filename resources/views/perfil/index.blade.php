@@ -44,6 +44,11 @@
                         class="border p-3 w-full rounded-lg
                         "
                     />
+                    @error('imagen')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                        {{ 'Imagen demasiado pesada. Max: 1.0 [mb]' }}
+                    </p>
+                    @enderror
                 </div>
                 <div class="mb-1">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">
